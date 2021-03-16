@@ -11,7 +11,7 @@ Katy: Ron's quote generator
 
 JP: Food API
 
-Alex: Any For Loops!!!
+Alex: Click events and pushing data to HTML/also working on Food API
 
 ## APIs we are using
 Ron Swanson Quote Generator
