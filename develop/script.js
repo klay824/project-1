@@ -11,6 +11,6 @@ $.ajax({
 	dataType: 'jsonp',
 	data: { term: 'restaurant', lat: xxx, long: xxx }, // callback is not necessary
 	success: function(data) {
-		// data is a normal response shown on yelp's API page
+		console.log(data);
 	}
 });
