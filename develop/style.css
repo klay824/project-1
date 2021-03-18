@@ -1,0 +1,17 @@
+:root {
+    --light: rgb(167, 186, 216);
+
+}
+
+body {
+    background-color: var(--light);
+  }
+
+.hero-banner {
+    background-image: url(../assets/ron-banner-2000-x-600-centered.png);
+    background-color: var(--light); /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
