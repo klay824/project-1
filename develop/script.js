@@ -1,16 +1,28 @@
-//Client ID: a_iIN-AAkwXxP2O6_bWT3g
+//Client ID: GF1SWDKWIT3C2Q00M5DGNDD23YYKCX513OYTTIX2502SUYGM
+//Client Secret: RRNKK4YTYGVVXZUAG11NIHBXHXRUT54WIDCWEFXPMXPHIAPK
 
-// API Key: cEhI0X89y--0ThDWWoEcUJ1OJ0s2yhfvWcdwurErDWl5b5JmH8qVHSCfgadoN04WQDtJaOuEUrcqSNk0rJkod1ic25nYvTfJcdcRA409DgSZrCC8j3hBs5K3UKRSYHYx
-
-var apiKey =
-	'cEhI0X89y--0ThDWWoEcUJ1OJ0s2yhfvWcdwurErDWl5b5JmH8qVHSCfgadoN04WQDtJaOuEUrcqSNk0rJkod1ic25nYvTfJcdcRA409DgSZrCC8j3hBs5K3UKRSYHYx';
-var foodApi = 'https://api.yelp.com/v3/businesses/search';
+var apiId = 'GF1SWDKWIT3C2Q00M5DGNDD23YYKCX513OYTTIX2502SUYGM';
+var apiSecret = 'RRNKK4YTYGVVXZUAG11NIHBXHXRUT54WIDCWEFXPMXPHIAPK';
+var apiUrl = `https://api.foursquare.com/v2/venues/explore?client_id=${apiId}&client_secret=${apiSecret}&v=20180323&limit=1&ll=40.7243,-74.0018&query=steak`;
+// function getApi(url) {
+// 	fetch(url).then(function(response) {
+// 		console.log(response);
+// 		if (response.status === 200) {
+// 			responseText.textContent = response.status;
+// 		}
+// 		return response.json();
+// 	});
+// }
 
 $.ajax({
-	url: 'http://api.yelp.com/business_review_search',
-	dataType: 'jsonp',
-	data: { term: 'restaurant', lat: xxx, long: xxx }, // callback is not necessary
+	dataType: 'json',
+	url: apiUrl,
+	data: {},
 	success: function(data) {
+		// Code for handling API response
 		console.log(data);
+	},
+	error: function(jqXHR, textStatus, errorThrown) {
+		// Code for handling errors
 	}
 });
