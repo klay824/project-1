@@ -7,7 +7,7 @@ body {
   }
 
 .hero-banner {
-    background-image: url(/assets/images/ron-banner-2000-x-600-centered.png);
+    background-image: url(images/ron-banner-2000-x-600-centered.png);
     background-color: var(--light); /* Used if the image is unavailable */
     height: 500px; /* You must set a specified height */
     background-position: center; /* Center the image */
@@ -32,7 +32,7 @@ body {
 
   .breakfastBtn {
     box-shadow: 0 30px 60px black;
-    background: url(/assets/images/baconeggs.png);
+    background: url(images/baconeggs.png);
     background-size: contain;
     background-repeat: none;
     
@@ -43,7 +43,7 @@ body {
   }
   .steakBtn {
     box-shadow: 0 30px 60px black;
-    background: url(/assets/images/steak.png);
+    background: url(images/steak.png);
     background-size: contain;
   }
   .steakBtn:hover {
