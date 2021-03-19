@@ -11,7 +11,7 @@ fetch(breakfastUrl)
         var quote = (data[2]);
         // var quoteDisplayed = '<h4>' + quote + '</h4>';
         // var ronQuote = $("body");
-        ronQuote.append(quoteDisplayed);
+        // ronQuote.append(quoteDisplayed);
     })
 
 fetch(steakUrl)
@@ -23,5 +23,5 @@ fetch(steakUrl)
         var quote = (data);
         // var quoteDisplayed = '<h4>' + quote + '</h4>';
         // var ronQuote = $("body");
-        ronQuote.append(quoteDisplayed);
+        // ronQuote.append(quoteDisplayed);
     })
