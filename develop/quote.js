@@ -25,3 +25,4 @@ fetch(steakUrl)
         // var ronQuote = $("body");
         // ronQuote.append(quoteDisplayed);
     })
+
