@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ron Swanson</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/develop/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./develop/style.css" />
 </head>
 
 
@@ -18,12 +20,31 @@
 
 
     <div>
-        <a href=""> 
-            <button class="button breakfastBtn"></button>
-        </a>
-        <a href=""> 
-            <button class="button steakBtn"></button>
-        </a>
+        <!-- button trigger for breakfast modal-->
+        <button data-target="modal1" class="btn modal-trigger button breakfastBtn"></button>
+        <!-- content for breakfast modal here-->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+        <!-- Button trigger for steak modal-->
+        <button data-target="modal2" class="btn modal-trigger button steakBtn"></button>
+        <!-- content for steak modal here-->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+
         <p>"There has never</p>
         <p>been a sadness</p>
         <p>that can't be cured</p>
@@ -38,8 +59,9 @@
     </button>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./develop/script.js"></script>
-
+    <script src="./develop/modals.js"></script>
     <script src="./develop/quote.js"></script>
 </body>
 
