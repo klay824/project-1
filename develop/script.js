@@ -17,11 +17,9 @@ var locationResult;
 var isSteak = false;
 var isBreakfast = false;
 
-$('.modal').modal(
-	{
-		// dismissible: true
-	}
-);
+$('.modal').modal({
+	dismissible: false
+});
 
 searchBtn1.submit(function(event) {
 	event.preventDefault();
@@ -43,7 +41,7 @@ searchBtn2.submit(function(event) {
 
 function getVenues() {
 	var apiUrl = `https://api.foursquare.com/v2/venues/search?client_id=${apiId}&client_secret=${apiSecret}&v=20200320&categoryId=${categoryId}&limit=50&near=${userInput}`;
-
+	resultText.empty();
 	$.ajax({
 		dataType: 'json',
 		url: apiUrl,
@@ -77,19 +75,23 @@ function getVenues() {
 }
 
 function getInfo() {
-	var venueUrl = `https://api.foursquare.com/v2/venues/${venueId}?client_id=${apiId}&client_secret=${apiSecret}&v=20200320`;
-	$.ajax({
-		dataType: 'json',
-		url: venueUrl,
-		data: {},
-		success: function(data) {
-			console.log(data.response);
-			var link = data.response.venue.url;
-			console.log(link);
-			resultText.append(`<a href= "${link}">Website</a>`);
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-			// Code for handling errors
-		}
-	});
+	//TOO MANY CALLS
+	// var venueUrl = `https://api.foursquare.com/v2/venues/${venueId}?client_id=${apiId}&client_secret=${apiSecret}&v=20200320`;
+	// $.ajax({
+	// 	dataType: 'json',
+	// 	url: venueUrl,
+	// 	data: {},
+	// 	success: function(data) {
+	// 		console.log(data.response);
+	// 		var link = data.response.venue.url;
+	// 		console.log(link);
+	// 		resultText.append(`<a href= "${link}">Website</a>`);
+	// 	},
+	// 	error: function(jqXHR, textStatus, errorThrown) {
+	// 		// Code for handling errors
+	// 	}
+	// });
 }
+$('.modal-close').click(function() {
+	resultText.empty();
+});
