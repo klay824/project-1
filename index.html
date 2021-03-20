@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="./develop/style.css" />
 </head>
 
-
 <body>
-    <header class="hero-banner">
-    </header>
+    <header class="hero-banner"></header>
 
     <h1 id="top">Give Me All The Bacon And Eggs</h1>
 
-
     <div>
         <!-- button trigger for breakfast modal-->
-        <button data-target="modal1" class="btn modal-trigger button breakfastBtn"></button>
+        <div class="container">
+            <button data-target="modal1" class="btn modal-trigger button breakfastBtn"></button>
+        </div>
         <!-- content for breakfast modal here-->
         <div id="modal1" class="modal">
             <div class="modal-content breakfast-modal">
@@ -36,7 +35,9 @@
             </div>
         </div>
         <!-- Button trigger for steak modal-->
-        <button data-target="modal2" class="btn modal-trigger button steakBtn"></button>
+        <div class="container">
+            <button data-target="modal2" class="btn modal-trigger button steakBtn"></button>
+        </div>
         <!-- content for steak modal here-->
         <div id="modal2" class="modal">
             <div class="modal-content steak-modal">
@@ -51,22 +52,16 @@
             </div>
         </div>
 
-        <p>"There has never</p>
-        <p>been a sadness</p>
-        <p>that can't be cured</p>
-        <p>by breakfast food."</p>
-        <p>-Ron Swanson</p>
     </div>
-    
-    <button class="breakfastBtn">
-        <div class="eggsandbacon"></div>
-    </button>
+
+    <footer>
+        <p>"When I eat, it is the food that is scared." -Ron Swanson</p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
     <script src="./develop/modals.js"></script>
-    <script src="./develop/quote.js"></script>
     <script src="./develop/script.js"></script>
     
 </body>
