@@ -53,6 +53,7 @@ function getVenues() {
 			// Code for handling API response
 
 			var venuesList = data.response.venues;
+			console.log(venuesList);
 			var result = venuesList[Math.floor(Math.random() * venuesList.length)];
 			console.log(result);
 			restaurantResult = result.name;
@@ -78,7 +79,10 @@ function getVenues() {
 }
 
 function getInfo() {
+<<<<<<< HEAD
+=======
 	//TOO MANY CALLS
+>>>>>>> ee5ea35de78f450d625ad867686b1d6ba87f2bb9
 	// var venueUrl = `https://api.foursquare.com/v2/venues/${venueId}?client_id=${apiId}&client_secret=${apiSecret}&v=20200320`;
 	// $.ajax({
 	// 	dataType: 'json',
