@@ -18,8 +18,8 @@ $(document).ready(function () {
 
         var ronIcon = L.icon({
             iconUrl: './develop/images/ron-head.png',
-            iconSize: [45, 45],
-            iconAnchor: [lat, lng],
+            iconSize: [32, 32],
+            iconAnchor: [16,32]
         });
 
         L.marker([lat, lng], {icon: ronIcon}).addTo(map);
