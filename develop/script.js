@@ -23,6 +23,7 @@ $('.modal').modal({
 
 searchBtn1.submit(function(event) {
 	event.preventDefault();
+	resultText.empty();
 	var breakfastId = '4bf58dd8d48988d147941735';
 	categoryId = breakfastId;
 	userInput = $('#search-value-1').val();
@@ -32,16 +33,18 @@ searchBtn1.submit(function(event) {
 
 searchBtn2.submit(function(event) {
 	event.preventDefault();
+	resultText.empty();
 	var steakId = '4bf58dd8d48988d1cc941735';
 	categoryId = steakId;
 	userInput = $('#search-value-2').val();
+	console.log(userInput);
 	isSteak = true;
 	getVenues();
 });
 
 function getVenues() {
 	var apiUrl = `https://api.foursquare.com/v2/venues/search?client_id=${apiId}&client_secret=${apiSecret}&v=20200320&categoryId=${categoryId}&limit=50&near=${userInput}`;
-	resultText.empty();
+
 	$.ajax({
 		dataType: 'json',
 		url: apiUrl,
