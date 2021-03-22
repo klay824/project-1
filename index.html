@@ -12,21 +12,21 @@
 </head>
 
 <body>
-    <header class="hero-banner"></header>
-
-    <h1 id="top">Give Me All The Bacon And Eggs</h1>
-
     <div>
-        <!-- button trigger for breakfast modal-->
-        <div class="container">
-            <button data-target="modal1" class="btn modal-trigger button breakfastBtn"></button>
-        </div>
+        <header class="hero-banner col-sm-12"></header>
+    </div>
+    <div>
+        <h1 id="top">Give Me All The Bacon And Eggs</h1>
+    </div>
+    <div class="container">
+            <!-- button trigger for breakfast modal-->
+            <button data-target="modal1" class="btn modal-trigger button breakfastBtn col s3 offset-s3"></button>
         <!-- content for breakfast modal here-->
         <div id="modal1" class="modal">
             <div class="modal-content breakfast-modal">
                 <h4>Modal Header</h4>
                 <form id="search-form-1" class="form-inline form-group">
-                    <input class="form-control" type="text" name="city" id="search-value-1"/>
+                    <input class="form-control" type="text" name="city" id="search-value-1" />
                     <button type="submit" class="btn btn-primary"> <i class="fa fa-search"></i></button>
                 </form>
             </div>
@@ -35,22 +35,21 @@
             </div>
         </div>
         <!-- Button trigger for steak modal-->
-        <div class="container">
-            <button data-target="modal2" class="btn modal-trigger button steakBtn"></button>
-        </div>
+        <button data-target="modal2" class="btn modal-trigger button steakBtn col s3 offset-s3"></button>
         <!-- content for steak modal here-->
         <div id="modal2" class="modal">
             <div class="modal-content steak-modal">
                 <h4>Modal Header</h4>
                 <form id="search-form-2" class="form-inline form-group">
-                    <input class="form-control" type="text" name="city" id="search-value-2"/>
+                    <input class="form-control" type="text" name="city" id="search-value-2" />
                     <button type="submit" class="btn btn-primary"> <i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
         </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
 
     </div>
 
@@ -60,10 +59,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
     <script src="./develop/modals.js"></script>
     <script src="./develop/script.js"></script>
-    
+
 </body>
 
 </html>
