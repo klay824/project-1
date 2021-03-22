@@ -14,6 +14,8 @@ var searchBtn1 = $('#search-form-1');
 var searchBtn2 = $('#search-form-2');
 var breakfastModal = $('.breakfast-modal');
 var steakModal = $('.steak-modal');
+var mapBreakfastEl = $('#map-breakfast');
+var mapSteakEl = $('#map-steak');
 var restaurantResult;
 var locationResult;
 var isSteak = false;
@@ -26,6 +28,7 @@ $('.modal').modal({
 searchBtn1.submit(function(event) {
 	event.preventDefault();
 	resultText.empty();
+	mapBreakfastEl.show();
 	var breakfastId = '4bf58dd8d48988d147941735';
 	categoryId = breakfastId;
 	userInput = $('#search-value-1').val();
@@ -36,6 +39,7 @@ searchBtn1.submit(function(event) {
 searchBtn2.submit(function(event) {
 	event.preventDefault();
 	resultText.empty();
+	mapSteakEl.show();
 	var steakId = '4bf58dd8d48988d1cc941735';
 	categoryId = steakId;
 	userInput = $('#search-value-2').val();
@@ -63,7 +67,7 @@ function getVenues() {
 			var lng = result.location.lng;
 			// var mapEl = $('#map');
 			// var mapEl = $('<div id="map">')
-			generateMap(lat, lng);
+			// generateMap(lat, lng);
 			restaurantResult = result.name;
 			locationResult = result.location.address;
 			venueId = result.id;
@@ -75,10 +79,12 @@ function getVenues() {
 			if (isBreakfast) {
 				breakfastModal.append(resultText);
 				// breakfastModal.append(mapEl);
+				generateBreakfastMap(lat, lng);	
 				isBreakfast = false;
 			} else if (isSteak) {
 				steakModal.append(resultText);
 				// breakfastModal.append(mapEl);
+				generateSteakMap(lat, lng);
 				isSteak = false;
 			}
 			getInfo();
@@ -90,8 +96,8 @@ function getVenues() {
 }
 
 
-function generateMap(lat, lng) {
-    var map = L.map('map').setView([lat, lng], 12);
+function generateBreakfastMap(lat, lng) {
+    var map = L.map('map-breakfast').setView([lat, lng], 12);
 
     L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG"
 	).addTo(map);
@@ -104,6 +110,22 @@ function generateMap(lat, lng) {
 	
     L.marker([lat, lng], {icon: ronIcon}).addTo(map);
 }
+
+function generateSteakMap(lat, lng) {
+    var map = L.map('map-steak').setView([lat, lng], 12);
+
+    L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG"
+	).addTo(map);
+
+    var ronIcon = L.icon({
+        iconUrl: './develop/images/ron-head.png',
+        iconSize: [32, 32],
+        iconAnchor: [16,32]
+    })
+	
+    L.marker([lat, lng], {icon: ronIcon}).addTo(map);
+}
+
 
 function getInfo() {
 	//TOO MANY CALLS
@@ -125,5 +147,6 @@ function getInfo() {
 }
 $('.modal-close').click(function() {
 	resultText.empty();
-	// mapEl.remove();
+	mapBreakfastEl.hide();
+	mapSteakEl.hide();
 });
