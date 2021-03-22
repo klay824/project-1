@@ -78,22 +78,21 @@ function getVenues() {
 }
 
 function getInfo() {
-	//TOO MANY CALLS
-	// var venueUrl = `https://api.foursquare.com/v2/venues/${venueId}?client_id=${apiId}&client_secret=${apiSecret}&v=20200320`;
-	// $.ajax({
-	// 	dataType: 'json',
-	// 	url: venueUrl,
-	// 	data: {},
-	// 	success: function(data) {
-	// 		console.log(data.response);
-	// 		var link = data.response.venue.url;
-	// 		console.log(link);
-	// 		resultText.append(`<a href= "${link}">Website</a>`);
-	// 	},
-	// 	error: function(jqXHR, textStatus, errorThrown) {
-	// 		// Code for handling errors
-	// 	}
-	// });
+	var venueUrl = `https://api.foursquare.com/v2/venues/${venueId}?client_id=${apiId}&client_secret=${apiSecret}&v=20200320`;
+	$.ajax({
+		dataType: 'json',
+		url: venueUrl,
+		data: {},
+		success: function(data) {
+			console.log(data.response);
+			var link = data.response.venue.url;
+			console.log(link);
+			resultText.append(`<a href= "${link}">Website</a>`);
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			// Code for handling errors
+		}
+	});
 }
 $('.modal-close').click(function() {
 	resultText.empty();
