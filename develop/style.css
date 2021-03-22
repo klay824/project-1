@@ -62,3 +62,10 @@ footer {
 .modal1 {
 
 }
+
+
+#map {
+  margin: 1rem;
+  height: 10rem;
+  width: 10rem;
+}

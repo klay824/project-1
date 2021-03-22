@@ -18,8 +18,8 @@ $(document).ready(function () {
 
         var ronIcon = L.icon({
             iconUrl: './develop/images/ron-head.png',
-            iconSize: [45, 45],
-            iconAnchor: [lat, lng],
+            iconSize: [32, 32],
+            iconAnchor: [16,32]
         });
 
         L.marker([lat, lng], {icon: ronIcon}).addTo(map);
@@ -31,6 +31,21 @@ $(document).ready(function () {
 });
 
 
+// function generateMap(lat, lng) {
+//     var map = L.map('map').setView([lat, lng], 12);
+
+//     L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG", {
+//     attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+//     }).addTo(map);
+
+//     var ronIcon = L.icon({
+//         iconUrl: './develop/images/ron-head.png',
+//         iconSize: [32, 32],
+//         iconAnchor: [16,32]
+//     });
+
+//     L.marker([lat, lng], {icon: ronIcon}).addTo(map);
+// }
 
 
 

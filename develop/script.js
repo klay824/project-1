@@ -1,12 +1,14 @@
 //Client ID: GF1SWDKWIT3C2Q00M5DGNDD23YYKCX513OYTTIX2502SUYGM
 //Client Secret: RRNKK4YTYGVVXZUAG11NIHBXHXRUT54WIDCWEFXPMXPHIAPK
+// Client ID #2: 331Z0TB522DGP3GHJXVW4OTCRNC4G4DNSMISOO2KMZKTFGVX
+// Client Secret #2: UAT2EFVC2OKRSLAXE4BEOHCQSDE5CR0MYCY3MTD3JEXASLG1
 //Breakfast diner = 4bf58dd8d48988d147941735
 //Steakhouse = 4bf58dd8d48988d1cc941735
 var categoryId;
 var userInput;
 var venueId;
-var apiId = 'GF1SWDKWIT3C2Q00M5DGNDD23YYKCX513OYTTIX2502SUYGM';
-var apiSecret = 'RRNKK4YTYGVVXZUAG11NIHBXHXRUT54WIDCWEFXPMXPHIAPK';
+var apiId = '331Z0TB522DGP3GHJXVW4OTCRNC4G4DNSMISOO2KMZKTFGVX';
+var apiSecret = 'UAT2EFVC2OKRSLAXE4BEOHCQSDE5CR0MYCY3MTD3JEXASLG1';
 var resultText = $('<h6>');
 var searchBtn1 = $('#search-form-1');
 var searchBtn2 = $('#search-form-2');
@@ -53,8 +55,15 @@ function getVenues() {
 			// Code for handling API response
 
 			var venuesList = data.response.venues;
+			console.log(venuesList);
 			var result = venuesList[Math.floor(Math.random() * venuesList.length)];
 			console.log(result);
+			console.log(result.location.lat, result.location.lng);
+			var lat = result.location.lat;
+			var lng = result.location.lng;
+			// var mapEl = $('#map');
+			// var mapEl = $('<div id="map">')
+			generateMap(lat, lng);
 			restaurantResult = result.name;
 			locationResult = result.location.address;
 			venueId = result.id;
@@ -62,11 +71,14 @@ function getVenues() {
 			resultText.append('<br>');
 			resultText.append(locationResult);
 			resultText.append('<br>');
+
 			if (isBreakfast) {
 				breakfastModal.append(resultText);
+				// breakfastModal.append(mapEl);
 				isBreakfast = false;
 			} else if (isSteak) {
 				steakModal.append(resultText);
+				// breakfastModal.append(mapEl);
 				isSteak = false;
 			}
 			getInfo();
@@ -75,6 +87,22 @@ function getVenues() {
 			// Code for handling errors
 		}
 	});
+}
+
+
+function generateMap(lat, lng) {
+    var map = L.map('map').setView([lat, lng], 12);
+
+    L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG"
+	).addTo(map);
+
+    var ronIcon = L.icon({
+        iconUrl: './develop/images/ron-head.png',
+        iconSize: [32, 32],
+        iconAnchor: [16,32]
+    })
+	
+    L.marker([lat, lng], {icon: ronIcon}).addTo(map);
 }
 
 function getInfo() {
@@ -96,4 +124,5 @@ function getInfo() {
 }
 $('.modal-close').click(function() {
 	resultText.empty();
+	// mapEl.remove();
 });

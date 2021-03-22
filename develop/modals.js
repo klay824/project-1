@@ -1,68 +1,69 @@
 // loads document then runs the function
-$(document).ready(function() {
-	// local variables
-	var searchBtn1 = $('#search-form-1');
-	var searchBtn2 = $('#search-form-2');
-	var quoteUrl = 'https://ron-swanson-quotes.herokuapp.com/v2/quotes';
-	var breakfastUrl = `${quoteUrl}/search/breakfast`;
-	var steakUrl = `${quoteUrl}/search/steak`;
 
-	// makes modals pop up on button click
-	$('.modal').modal({
-		dismissible: false
-	});
+$(document).ready(function () {
 
-	searchBtn1.submit(function(event) {
-		event.preventDefault();
-		$('.remove').remove();
+  // local variables
+  var searchBtn1 = $("#search-form-1");
+  var searchBtn2 = $("#search-form-2");
+  var quoteUrl = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
+    
+  // makes modals pop up on button click
+  $('.modal').modal({
+    dismissible: false
+  });
+  
+  // fetches quote upon search button click and writes it to the breakfast modal
+  searchBtn1.submit(function (event) {
+    event.preventDefault();
 
-		fetch(quoteUrl)
-			.then(function(response) {
-				return response.json();
-			})
-			.then(function(data) {
-				console.log(data);
+    // removes the previous quote upon generating a new one
+    $(".remove").remove();
 
-				var random = Math.floor(Math.random() * data.length);
-				console.log(random);
+    fetch(quoteUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
 
-				var quote = data[random];
-				console.log(quote);
+        var random = Math.floor(Math.random() * data.length);
+        console.log(random);
 
-				var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
-				var ronQuote = $('.modal-content');
-				ronQuote.append(quoteDisplayed);
-			});
-	});
+        var quote = data[random];
+        console.log(quote);
 
-	$('.modal-close').click(function() {
-		$('.remove').remove();
-	});
+        var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
+        var ronQuote = $(".modal-content");
+        ronQuote.append(quoteDisplayed);
+      })
+  })
 
-	searchBtn2.submit(function(event) {
-		event.preventDefault();
-		$('.remove').remove();
+  // removes the generated quote upon closure of the breakfast modal so the modal is empty upon re-opening
+  $(".modal-close").click(function() {
+    $(".remove").remove();
+  })
+  
+  // fetches quote upon search button click and write is to the steak modal
+  searchBtn2.submit(function (event) {
+    event.preventDefault();
+    $(".remove").remove();
 
-		fetch(quoteUrl)
-			.then(function(response) {
-				return response.json();
-			})
-			.then(function(data) {
-				console.log(data);
+    fetch(quoteUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
 
-				var random = Math.floor(Math.random() * data.length);
-				console.log(random);
+        var random = Math.floor(Math.random() * data.length);
+        console.log(random);
 
-				var quote = data[random];
-				console.log(quote);
+        var quote = data[random];
+        console.log(quote);
 
-				var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
-				var ronQuote = $('.modal-content');
-				ronQuote.append(quoteDisplayed);
-			});
-	});
-
-	$('.modal-close').click(function() {
-		$('.remove').remove();
-	});
-});
+        var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
+        var ronQuote = $(".modal-content");
+        ronQuote.append(quoteDisplayed);
+      })
+  })
+})
