@@ -1,18 +1,25 @@
+// loads document then runs the function
+
 $(document).ready(function () {
 
+  // local variables
   var searchBtn1 = $("#search-form-1");
   var searchBtn2 = $("#search-form-2");
   var quoteUrl = "https://ron-swanson-quotes.herokuapp.com/v2/quotes";
-  var breakfastUrl = `${quoteUrl}/search/breakfast`;
-  var steakUrl = `${quoteUrl}/search/steak`;
-
+    
+  // makes modals pop up on button click
   $('.modal').modal({
-    // dismissible: true
+    dismissible: false
   });
+  
+  // fetches quote upon search button click and writes it to the breakfast modal
   searchBtn1.submit(function (event) {
     event.preventDefault();
 
-    fetch(breakfastUrl)
+    // removes the previous quote upon generating a new one
+    $(".remove").remove();
+
+    fetch(quoteUrl)
       .then(function (response) {
         return response.json();
       })
@@ -25,18 +32,23 @@ $(document).ready(function () {
         var quote = data[random];
         console.log(quote);
 
-
-
-        var quoteDisplayed = '<p>' + quote + '</p>';
-        var ronQuote = $(".modal-content");
+        var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
+        var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })
   })
 
+  // removes the generated quote upon closure of the breakfast modal so the modal is empty upon re-opening
+  $(".modal-close").click(function() {
+    $(".remove").remove();
+  })
+  
+  // fetches quote upon search button click and write is to the steak modal
   searchBtn2.submit(function (event) {
     event.preventDefault();
+    $(".remove").remove();
 
-    fetch(steakUrl)
+    fetch(quoteUrl)
       .then(function (response) {
         return response.json();
       })
@@ -49,13 +61,9 @@ $(document).ready(function () {
         var quote = data[random];
         console.log(quote);
 
-
-
-        var quoteDisplayed = '<p>' + quote + '</p>';
-        var ronQuote = $(".modal-content");
+        var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
+        var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })
   })
-
-});
-
+})

@@ -1,5 +1,5 @@
 :root {
-    --light: rgb(167, 186, 216);
+	--light: rgb(167, 186, 216);
 }
 
 body {
@@ -8,7 +8,7 @@ body {
   }
 
 header {
-  width: 100%;
+	width: 100%;
 }
 .hero-banner {
   background-image: url(images/ron-banner-2000-x-600-centered.png);
@@ -27,34 +27,34 @@ h1 {
 }
 
 .button {
-  margin: 10px;
-  width: 125px;
-  height: 125px;
-  border: none;
-  border-radius: 15px 50px 30px;
-  transition-duration: .60s;
-  background-color: #f3e09e;
+	margin: 10px;
+	width: 125px;
+	height: 125px;
+	border: none;
+	border-radius: 15px 50px 30px;
+	transition-duration: .60s;
+	background-color: #f3e09e;
 }
 
 .breakfastBtn {
-  box-shadow: 0 30px 60px black;
-  background: url(images/baconeggs.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+	box-shadow: 0 30px 60px black;
+	background: url(images/baconeggs.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .breakfastBtn:hover {
-  box-shadow: 0 5px 10px black;
-  transform: scale(.95);
+	box-shadow: 0 5px 10px black;
+	transform: scale(.95);
 }
 .steakBtn {
-  box-shadow: 0 30px 60px black;
-  background: url(images/steak.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+	box-shadow: 0 30px 60px black;
+	background: url(images/steak.png);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .steakBtn:hover {
-  box-shadow: 0 5px 10px black;
-  transform: scale(.95);
+	box-shadow: 0 5px 10px black;
+	transform: scale(.95);
 }
 
 .container {
@@ -99,7 +99,7 @@ width: 300px;
 
 /* For mobile phones: */
 [class*="col-"] {
-  width: 100%;
+	width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
