@@ -14,18 +14,19 @@
 </head>
 
 <body>
-    <header class="hero-banner"></header>
-
-    <h1 id="top">Give Me All The Bacon And Eggs</h1>
-
     <div>
-        <!-- button trigger for breakfast modal-->
-        <div class="container">
-            <button data-target="modal1" class="btn modal-trigger button breakfastBtn"></button>
-        </div>
+        <header class="hero-banner col-sm-12"></header>
+    </div>
+    <div>
+        <h1 id="top">Give Me All The Bacon And Eggs</h1>
+    </div>
+    <div class="container">
+            <!-- button trigger for breakfast modal-->
+            <button data-target="modal1" class="btn modal-trigger button breakfastBtn col s3 offset-s3"></button>
         <!-- content for breakfast modal here-->
         <div id="modal1" class="modal">
             <div class="modal-content breakfast-modal">
+
                 <h4>Breakfast Locator</h4>
                 <div class="row">
                     <form id="search-form-1" class="col s12">
@@ -43,6 +44,7 @@
                     <div class="map-div col s8"></div>
 
                 </div>
+
             </div>
 
             <div class="modal-footer row">
@@ -52,12 +54,11 @@
         </div>
 
         <!-- Button trigger for steak modal-->
-        <div class="container">
-            <button data-target="modal2" class="btn modal-trigger button steakBtn"></button>
-        </div>
+        <button data-target="modal2" class="btn modal-trigger button steakBtn col s3 offset-s3"></button>
         <!-- content for steak modal here-->
         <div id="modal2" class="modal">
             <div class="modal-content steak-modal">
+
                 <h4>Steak Locator</h4>
                 <div class="row">
                     <form id="search-form-2" class="col s12">
@@ -75,7 +76,12 @@
                 <div class="quote col s8"></div>
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat col s1 push-s3">Exit</a>
             </div>
+
         </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
 
     </div>
 
@@ -85,11 +91,13 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="./develop/script.js"></script>
     <script src="./develop/modals.js"></script>
     
+
 </body>
 
 </html>
