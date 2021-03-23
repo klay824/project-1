@@ -18,7 +18,7 @@ var restaurantResult;
 var locationResult;
 var isSteak = false;
 var isBreakfast = false;
-
+var mapDiv;
 $('.modal').modal({
 	dismissible: false
 });
@@ -26,6 +26,9 @@ $('.modal').modal({
 searchBtn1.submit(function(event) {
 	event.preventDefault();
 	resultText.empty();
+	if (mapDiv !== undefined) {
+		mapDiv.remove();
+	}
 	var breakfastId = '4bf58dd8d48988d147941735';
 	categoryId = breakfastId;
 	userInput = $('#search-value-1').val();
@@ -36,6 +39,9 @@ searchBtn1.submit(function(event) {
 searchBtn2.submit(function(event) {
 	event.preventDefault();
 	resultText.empty();
+	if (mapDiv !== undefined) {
+		mapDiv.remove();
+	}
 	var steakId = '4bf58dd8d48988d1cc941735';
 	categoryId = steakId;
 	userInput = $('#search-value-2').val();
@@ -61,9 +67,7 @@ function getVenues() {
 			console.log(result.location.lat, result.location.lng);
 			var lat = result.location.lat;
 			var lng = result.location.lng;
-			// var mapEl = $('#map');
-			// var mapEl = $('<div id="map">')
-			generateMap(lat, lng);
+
 			restaurantResult = result.name;
 			locationResult = result.location.address;
 			venueId = result.id;
@@ -74,55 +78,57 @@ function getVenues() {
 
 			if (isBreakfast) {
 				breakfastModal.append(resultText);
-				// breakfastModal.append(mapEl);
+				mapDiv = $('<div id= "map"></div>');
+				breakfastModal.append(mapDiv);
+				generateMap(lat, lng);
 				isBreakfast = false;
 			} else if (isSteak) {
 				steakModal.append(resultText);
-				// breakfastModal.append(mapEl);
+				mapDiv = $('<div id= "map"></div>');
+				steakModal.append(mapDiv);
+				generateMap(lat, lng);
 				isSteak = false;
 			}
-			getInfo();
+			// getInfo();
 		},
 		error: function(jqXHR, textStatus, errorThrown) {
 			// Code for handling errors
 		}
 	});
 }
-
 
 function generateMap(lat, lng) {
-    var map = L.map('map').setView([lat, lng], 12);
+	var map = L.map('map').setView([ lat, lng ], 12);
 
-    L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG"
-	).addTo(map);
+	L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG').addTo(map);
 
-    var ronIcon = L.icon({
-        iconUrl: './develop/images/ron-head.png',
-        iconSize: [32, 32],
-        iconAnchor: [16,32]
-    })
-	
-    L.marker([lat, lng], {icon: ronIcon}).addTo(map);
-}
-
-function getInfo() {
-	var venueUrl = `https://api.foursquare.com/v2/venues/${venueId}?client_id=${apiId}&client_secret=${apiSecret}&v=20200320`;
-	$.ajax({
-		dataType: 'json',
-		url: venueUrl,
-		data: {},
-		success: function(data) {
-			console.log(data.response);
-			var link = data.response.venue.url;
-			console.log(link);
-			resultText.append(`<a href= "${link}">Website</a>`);
-		},
-		error: function(jqXHR, textStatus, errorThrown) {
-			// Code for handling errors
-		}
+	var ronIcon = L.icon({
+		iconUrl: './develop/images/ron-head.png',
+		iconSize: [ 32, 32 ],
+		iconAnchor: [ 16, 32 ]
 	});
+
+	L.marker([ lat, lng ], { icon: ronIcon }).addTo(map);
 }
+
+// function getInfo() {
+// 	var venueUrl = `https://api.foursquare.com/v2/venues/${venueId}?client_id=${apiId}&client_secret=${apiSecret}&v=20200320`;
+// 	$.ajax({
+// 		dataType: 'json',
+// 		url: venueUrl,
+// 		data: {},
+// 		success: function(data) {
+// 			console.log(data.response);
+// 			var link = data.response.venue.url;
+// 			console.log(link);
+// 			resultText.append(`<a href= "${link}">Website</a>`);
+// 		},
+// 		error: function(jqXHR, textStatus, errorThrown) {
+// 			// Code for handling errors
+// 		}
+// 	});
+// }
 $('.modal-close').click(function() {
 	resultText.empty();
-	// mapEl.remove();
+	mapDiv.remove();
 });
