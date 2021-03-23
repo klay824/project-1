@@ -33,7 +33,7 @@ $(document).ready(function () {
         console.log(quote);
 
         var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
-        var ronQuote = $(".modal-content");
+        var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })
   })
@@ -62,7 +62,7 @@ $(document).ready(function () {
         console.log(quote);
 
         var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
-        var ronQuote = $(".modal-content");
+        var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })
   })
