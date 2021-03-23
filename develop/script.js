@@ -12,8 +12,10 @@ var apiSecret = 'UAT2EFVC2OKRSLAXE4BEOHCQSDE5CR0MYCY3MTD3JEXASLG1';
 var resultText = $('<h6>');
 var searchBtn1 = $('#search-form-1');
 var searchBtn2 = $('#search-form-2');
-var breakfastModal = $('.breakfast-modal');
-var steakModal = $('.steak-modal');
+var breakfastModal = $('.breakfast-div');
+var steakModal = $('.steak-div');
+var mapBreakfastSpot = $(".breakfast-map-div");
+var mapSteakSpot = $(".steak-map-div");
 var restaurantResult;
 var locationResult;
 var isSteak = false;
@@ -67,7 +69,6 @@ function getVenues() {
 			console.log(result.location.lat, result.location.lng);
 			var lat = result.location.lat;
 			var lng = result.location.lng;
-
 			restaurantResult = result.name;
 			locationResult = result.location.address;
 			venueId = result.id;
@@ -79,13 +80,13 @@ function getVenues() {
 			if (isBreakfast) {
 				breakfastModal.append(resultText);
 				mapDiv = $('<div id= "map"></div>');
-				breakfastModal.append(mapDiv);
+				mapBreakfastSpot.append(mapDiv);
 				generateMap(lat, lng);
 				isBreakfast = false;
 			} else if (isSteak) {
 				steakModal.append(resultText);
 				mapDiv = $('<div id= "map"></div>');
-				steakModal.append(mapDiv);
+				mapSteakSpot.append(mapDiv);
 				generateMap(lat, lng);
 				isSteak = false;
 			}
@@ -131,6 +132,10 @@ function generateMap(lat, lng) {
 $('.modal-close').click(function() {
 	resultText.empty();
 	if (mapDiv !== undefined) {
+<<<<<<< HEAD
 		mapDiv.remove();
+=======
+	mapDiv.remove();
+>>>>>>> 515bcfd3cf37915e1a9b27c7b1d7c09cc0bda7d1
 	}
 });
