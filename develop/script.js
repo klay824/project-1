@@ -132,10 +132,6 @@ function generateMap(lat, lng) {
 $('.modal-close').click(function() {
 	resultText.empty();
 	if (mapDiv !== undefined) {
-<<<<<<< HEAD
-		mapDiv.remove();
-=======
 	mapDiv.remove();
->>>>>>> 515bcfd3cf37915e1a9b27c7b1d7c09cc0bda7d1
 	}
 });
