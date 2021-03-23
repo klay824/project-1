@@ -8,13 +8,17 @@ $(document).ready(function () {
         let lat = $("#lat").val();
         let lng = $("#lng").val();
         console.log(lat, lng);
+        // var mapEl = $("<div class='map'>")
+        var mapEl = document.createElement("div");
+        mapEl.style.height='600px';  
+        mapEl.style.width='600px';    
+        var body = document.querySelector('body');
 
+        
 
-        var map = L.map('map').setView([lat, lng], 12);
+        var map = L.map(mapEl).setView([lat, lng], 12);
 
-        L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG", {
-        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
-        }).addTo(map);
+        L.tileLayer("https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=NMlV6qsKkpTmzuffq3KG").addTo(map);
 
         var ronIcon = L.icon({
             iconUrl: './develop/images/ron-head.png',
@@ -23,6 +27,9 @@ $(document).ready(function () {
         });
 
         L.marker([lat, lng], {icon: ronIcon}).addTo(map);
+
+        
+        body.appendChild(mapEl);
 
     })
 

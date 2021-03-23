@@ -84,6 +84,7 @@ footer {
   height: 2.5rem;
 }
 
+
 #modal1 {
 background-image: url(images/137747728-bacon-scrambled-eggs-and-toast-seamless-pattern-english-breakfast-background.jpeg);
 height: 555px;
@@ -91,10 +92,14 @@ width: 300px;
 background-size:contain;
 }
 
-#modal1 {
-height: 555px;
-width: 300px;
+#map {
+	text-align: center;
+	margin: 1rem;
+	height: 15rem;
+	width: 15rem;
 }
+
+
 
 
 /* For mobile phones: */

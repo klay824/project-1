@@ -69,7 +69,6 @@ function getVenues() {
 			console.log(result.location.lat, result.location.lng);
 			var lat = result.location.lat;
 			var lng = result.location.lng;
-
 			restaurantResult = result.name;
 			locationResult = result.location.address;
 			venueId = result.id;
@@ -132,5 +131,11 @@ function generateMap(lat, lng) {
 // }
 $('.modal-close').click(function() {
 	resultText.empty();
+	if (mapDiv !== undefined) {
+<<<<<<< HEAD
+		mapDiv.remove();
+=======
 	mapDiv.remove();
+>>>>>>> 515bcfd3cf37915e1a9b27c7b1d7c09cc0bda7d1
+	}
 });
