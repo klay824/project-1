@@ -180,9 +180,11 @@ width: 300px; */
 }
 
 #map {
-	margin: 1rem;
+	margin: 0 auto;
 	height: 15rem;
-	width: 15rem;
+	width: 15rem; 
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 /* For mobile phones: */
