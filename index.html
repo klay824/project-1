@@ -10,15 +10,24 @@
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link id="ron-mode" rel="stylesheet" href="./develop/duke.css" />
+    <link id="ron-mode" rel="stylesheet" href="develop/style.css" />
 </head>
 
 <body>
     <div>
-        <header class="hero-banner col s12 m12 l12"></header>
+        <label class="switch">
+            <input id="switcher" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <header class="hero-banner col s12 m12 l12">
+            
+        </header>
     </div>
+     
+
     <div>
         <h1 id="top">Give Me All The Bacon And Eggs</h1>
+        
     </div>
     <div class="container">
             <!-- button trigger for breakfast modal-->
@@ -86,22 +95,16 @@
         <img src="develop/images/tenor.gif" alt="This will display an animated GIF" />
     </div>
 
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-    
-
     <footer>
         <p>"When I eat, it is the food that is scared." -Ron Swanson</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="./develop/script.js"></script>
     <script src="./develop/modals.js"></script>
+    <script src="develop/toggle.js"></script>
     
 
 </body>

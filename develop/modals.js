@@ -1,5 +1,4 @@
 // loads document then runs the function
-
 $(document).ready(function () {
 
   // local variables
