@@ -12,6 +12,7 @@ header {
 	width: auto;
 	padding-bottom: 30%;
 }
+
 .hero-banner {
 	background-image: url(images/ron-banner-2000-x-600-centered.png);
 	background-color: var(--light); /* Used if the image is unavailable */
@@ -80,49 +81,6 @@ input:checked + .slider:before {
   transform: translateX(26px) !important;
 }
 
-.breakfast-modal h4 {
-  background-color: #e0dddd;
-  padding: 10px;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.steak-modal h4 {
-	background-color: #e0dddd;
-	padding: 10px;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-  }
-
-#search-value-1 {
-  padding: 5px;
-  background-color: white;
-  border: solid;
-  border-width: 1px;
-  border-color: black;
-}
-
-.steak-modal h4 {
-	background-color: #e0dddd;
-	padding: 10px;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
-#search-value-2 {
-	padding: 5px;
-	background-color: white;
-	border: solid;
-	border-width: 1px;
-	border-color: black;
-}
-
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px !important;
@@ -164,16 +122,19 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .breakfastBtn:hover {
   box-shadow: 0 5px 10px black;
   transform: scale(0.95);
 }
+
 .steakBtn {
   box-shadow: 0 10px 20px black;
   background: url(images/steak.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .steakBtn:hover {
   box-shadow: 0 5px 10px black;
   transform: scale(0.95);
@@ -206,20 +167,61 @@ footer {
   -webkit-text-stroke-color: #2b2d2f;
 }
 
-
 #modal1 {
   background-image: url(images/137747728-bacon-scrambled-eggs-and-toast-seamless-pattern-english-breakfast-background.jpeg);
-  /* height: 555px;
-	width: 300px; */
   background-size: contain;
 }
 
 #modal2 {
   background-image: url(images/meat-steak-cartoon-set-icon-cartoon-set-icon-pork-sirloin-illustration-meat-steak-white-background_259641-41.jpeg);
-  /* height: 555px;
-		width: 300px; */
-  background-size: contain;
+	background-size: contain;
 }
+
+.breakfast-modal h4 {
+  background-color: #e0dddd;
+  padding: 10px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.steak-modal h4 {
+	background-color: #e0dddd;
+	padding: 10px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+  }
+
+#search-value-1 {
+  padding: 5px;
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+#search-value-2 {
+	padding: 5px;
+	background-color: white;
+	border: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
+.gray-background {
+  background-color: #e0dddd;
+}
+
+/* .breakfast-div {
+  background-color: #e0dddd;
+}
+
+.steak-div {
+  background-color: #e0dddd;
+} */
 
 .modal-footer {
 	background-color: #e0dddd !important;
@@ -230,6 +232,11 @@ footer {
 	margin-right: auto !important;
 	text-align: center !important;
 }
+
+.input-field {
+  margin-left: 10% !important;
+  width: 80% !important;    
+} 
 
 #map {
   margin: 0 auto;
