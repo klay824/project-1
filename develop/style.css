@@ -134,6 +134,10 @@ h1 {
 	margin: auto;
 }
 
+.search-button {
+	width: 75px;
+}
+
 .button {
 	margin: 10px;
 	width: 250px;
@@ -189,6 +193,10 @@ footer {
 	height: 2.5rem;
 }
 
+.input-field {
+	margin-left: 10% !important;
+	width: 80% !important;
+}
 #modal1 {
 	background-image: url(images/137747728-bacon-scrambled-eggs-and-toast-seamless-pattern-english-breakfast-background.jpeg);
 	
@@ -206,9 +214,11 @@ footer {
 }
 
 #map {
-	margin: 1rem;
+	margin: 0 auto;
 	height: 15rem;
 	width: 15rem;
+	border: 1px solid black;
+	border-radius: 10px;
 }
 
 /* For mobile phones: */
