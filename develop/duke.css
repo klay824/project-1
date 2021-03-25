@@ -1,188 +1,218 @@
 :root {
-	--light: #7268A6;
+  --light: #7268a6;
 }
 
 body {
-	background-color: var(--light);
-	height: 100px;
+  background-color: var(--light);
+  height: 100px;
 }
 
 header {
-	width: 100%;
+  width: 100%;
 }
 .hero-banner {
   background-image: url(images/duke-silver-2000-x-600-centered.png);
   background-color: var(--light); /* Used if the image is unavailable */
-  height: 300px; /* You must set a specified height */
+  height: 110px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: contain; /* Resize the background image to cover the entire container */
   background-position: top;
 }
 
 label.switch {
-	margin-top: 5px !important;
-	margin-left: 5px !important;
+  margin-top: 5px !important;
+  margin-left: 5px !important;
 }
 
 /* The switch - the box around the slider */
 .switch {
-    position: relative !important; 
-    display: inline-block !important;
-    width: 60px !important;
-    height: 34px !important;
+  position: relative !important;
+  display: inline-block !important;
+  width: 60px !important;
+  height: 34px !important;
 }
 
 /* Hide default HTML checkbox */
 .switch input {
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* The slider */
 .slider {
-    position: absolute !important;
-    cursor: pointer !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background-color: #6b3074 !important;
-    border: white 2px solid !important;
-    -webkit-transition: .4s !important;
-    transition: .4s !important;
+  position: absolute !important;
+  cursor: pointer !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: #6b3074 !important;
+  border: white 2px solid !important;
+  -webkit-transition: 0.4s !important;
+  transition: 0.4s !important;
 }
 
 .slider:before {
-    position: absolute !important;
-    content: "🎷" !important;
-    height: 26px !important;
-    width: 26px !important;
-    left: 4px !important;
-    bottom: 4px !important;
-    border: none !important;
-    -webkit-transition: .4s !important;
-    transition: .4s !important;
+  position: absolute !important;
+  content: "🎷" !important;
+  height: 26px !important;
+  width: 26px !important;
+  left: 4px !important;
+  bottom: 4px !important;
+  border: none !important;
+  -webkit-transition: 0.4s !important;
+  transition: 0.4s !important;
 }
 
 input:checked + .slider {
-    background-color: #6b3074 !important;
+  background-color: #6b3074 !important;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #6b3074 !important;
+  box-shadow: 0 0 1px #6b3074 !important;
 }
 
 input:checked + .slider:before {
-	-webkit-transform: translateX(26px) !important;
-	-ms-transform: translateX(26px) !important;
-    transform: translateX(26px) !important;
+  -webkit-transform: translateX(26px) !important;
+  -ms-transform: translateX(26px) !important;
+  transform: translateX(26px) !important;
 }
+
+.breakfast-modal h4 {
+    background-color: #e0dddd;
+    padding: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+.steak-modal h4 {
+    background-color: #e0dddd;
+    padding: 10px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#search-value-1 {
+    padding: 5px;
+    background-color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+  }
 
 /* Rounded sliders */
 .slider.round {
-    border-radius: 34px !important;
+  border-radius: 34px !important;
+}
+
+span.slider:before {
+margin: 0px !important;
 }
 
 .slider.round:before {
-    border-radius: 50% !important;
+  border-radius: 50% !important;
 }
 
 h1 {
-	color: white;
-	font-size: 20px;
-	text-align: center;
-	margin: auto;
-  }
-  
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+}
+
 .button {
-margin: 10px;
-width: 125px;
-height: 125px;
-border: none;
-border-radius: 15px 50px 30px;
-transition-duration: .60s;
-background-color: #6b3074;
+  margin: 10px;
+  width: 125px;
+  height: 125px;
+  border: none;
+  border-radius: 15px 50px 30px;
+  transition-duration: 0.6s;
+  background-color: #6b3074;
 }
 
 .breakfastBtn {
-box-shadow: 0 30px 60px black;
-background: url(images/ds-baconeggs.png);
-background-size: contain;
-background-repeat: no-repeat;
+  box-shadow: 0 10px 20px black;
+  background: url(images/ds-baconeggs.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .breakfastBtn:hover {
-box-shadow: 0 5px 10px black;
-transform: scale(.95);
+  box-shadow: 0 5px 10px black;
+  transform: scale(0.95);
 }
 .steakBtn {
-box-shadow: 0 30px 60px black;
-background: url(images/ds-steak.png);
-background-size: contain;
-background-repeat: no-repeat;
+  box-shadow: 0 10px 20px black;
+  background: url(images/steak.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .steakBtn:hover {
-box-shadow: 0 5px 10px black;
-transform: scale(.95);
+  box-shadow: 0 5px 10px black;
+  transform: scale(0.95);
 }
 
 .container {
-text-align: center;
-display: flex;
-position: relative;
+  text-align: center;
+  display: flex;
+  position: relative;
 }
 
 .gif {
-position: relative;
-margin-top: 40px;
-text-align: center;
-height: auto;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  height: auto;
 }
 
 footer {
-text-align: center;
-font-size: x-small;
-background-color: #6b3074;
-color: white;
-position: fixed;
-bottom: 0;
-width: 100%;
-height: 2.5rem;
+  text-align: center;
+  font-size: x-small;
+  background-color: #6b3074;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
 
-
 #modal1 {
-background-image: url(images/137747728-bacon-scrambled-eggs-and-toast-seamless-pattern-english-breakfast-background.jpeg);
-height: 555px;
-width: 300px;
-background-size:contain;
+  background-image: url(images/137747728-bacon-scrambled-eggs-and-toast-seamless-pattern-english-breakfast-background.jpeg);
+  /* height: 555px;
+width: 300px; */
+  background-size: contain;
+}
+
+#modal2 {
+  background-image: url(images/meat-steak-cartoon-set-icon-cartoon-set-icon-pork-sirloin-illustration-meat-steak-white-background_259641-41.jpeg);
+  /* height: 555px;
+    width: 300px; */
+  background-size: contain;
 }
 
 #map {
-	margin: 0 auto;
-	height: 15rem;
-	width: 15rem; 
-    border: 1px solid black;
-    border-radius: 10px;
+  margin: 0 auto;
+  height: 15rem;
+  width: 15rem;
+  border: 1px solid black;
+  border-radius: 10px;
 }
-
-
-
-
 
 /* For mobile phones: */
 [class*="col-"] {
-	width: 100%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-.hero-banner {
-	justify-content: center;
-	text-align: center;
-	height: 500px;
+  .hero-banner {
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+  }
+  h1 {
+  }
 }
-h1 {
-	
-}
-}
-  
