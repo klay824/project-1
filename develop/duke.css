@@ -145,12 +145,14 @@ h1 {
   box-shadow: 0 5px 10px black;
   transform: scale(0.95);
 }
+
 .steakBtn {
   box-shadow: 0 10px 20px black;
   background: url(images/steak.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .steakBtn:hover {
   box-shadow: 0 5px 10px black;
   transform: scale(0.95);

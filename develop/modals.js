@@ -31,7 +31,7 @@ $(document).ready(function () {
         var quote = data[random];
         console.log(quote);
 
-        var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
+        var quoteDisplayed = '<h6 class="remove">' + quote + '</h6>';
         var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })
@@ -60,7 +60,7 @@ $(document).ready(function () {
         var quote = data[random];
         console.log(quote);
 
-        var quoteDisplayed = '<h5 class="remove">' + quote + '</h5>';
+        var quoteDisplayed = '<h6 class="remove">' + quote + '</h6>';
         var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })
