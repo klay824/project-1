@@ -18,6 +18,10 @@ $(document).ready(function () {
     // removes the previous quote upon generating a new one
     $(".remove").remove();
 
+    // adds gray background to breakfast and steak restaurant sections
+    $(".breakfast-div").addClass("gray-background");
+    $(".steak-div").addClass("gray-background");
+
     fetch(quoteUrl)
       .then(function (response) {
         return response.json();
@@ -40,12 +44,20 @@ $(document).ready(function () {
   // removes the generated quote upon closure of the breakfast modal so the modal is empty upon re-opening
   $(".modal-close").click(function() {
     $(".remove").remove();
+
+    // removes class to completely remove remnants of gray bg
+    $(".breakfast-div").removeClass("gray-background");
+    $(".steak-div").removeClass("gray-background");
   })
   
   // fetches quote upon search button click and write is to the steak modal
   searchBtn2.submit(function (event) {
     event.preventDefault();
     $(".remove").remove();
+
+    // adds gray background to breakfast and steak restaurant sections
+    $(".breakfast-div").addClass("gray-background");
+    $(".steak-div").addClass("gray-background");
 
     fetch(quoteUrl)
       .then(function (response) {
