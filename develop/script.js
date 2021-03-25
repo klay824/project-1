@@ -70,12 +70,14 @@ function getVenues() {
 			var lat = result.location.lat;
 			var lng = result.location.lng;
 			restaurantResult = result.name;
-			locationResult = result.location.address;
+			locationResult = result.location.formattedAddress;
 			venueId = result.id;
 			resultText.append(restaurantResult);
 			resultText.append('<br>');
-			resultText.append(locationResult);
-			resultText.append('<br>');
+			for (i = 0; i < locationResult.length - 1; i++) {
+				resultText.append(locationResult[i]);
+				resultText.append('<br>');
+			}
 
 			if (isBreakfast) {
 				breakfastModal.append(resultText);
