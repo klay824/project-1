@@ -46,8 +46,8 @@ label.switch {
 .slider {
   position: absolute !important;
   cursor: pointer !important;
-  top: 0 !important;
-  left: 0 !important;
+  top: 2px !important;
+  left: 2px !important;
   right: 0 !important;
   bottom: 0 !important;
   background-color: #f3e09e !important;
@@ -93,7 +93,7 @@ span.slider:before {
 
 .slider.round:before {
   border-radius: 50% !important;
-  margin-top: 0px !important;
+  margin-top: -4px !important;
 }
 /* end of toggle switch styling */
 
