@@ -7,8 +7,8 @@
 var categoryId;
 var userInput;
 var venueId;
-var apiId = '331Z0TB522DGP3GHJXVW4OTCRNC4G4DNSMISOO2KMZKTFGVX';
-var apiSecret = 'UAT2EFVC2OKRSLAXE4BEOHCQSDE5CR0MYCY3MTD3JEXASLG1';
+var apiId = 'GF1SWDKWIT3C2Q00M5DGNDD23YYKCX513OYTTIX2502SUYGM';
+var apiSecret = 'RRNKK4YTYGVVXZUAG11NIHBXHXRUT54WIDCWEFXPMXPHIAPK';
 var resultText = $('<h6>');
 var searchBtn1 = $('#search-form-1');
 var searchBtn2 = $('#search-form-2');
