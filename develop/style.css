@@ -99,19 +99,22 @@ span.slider:before {
 
 h1 {
   color: white;
-  font-size: 20px;
+  font-size: 2em;
   text-align: center;
-  margin: auto;
+  margin: 1rem 2rem;
 }
 
-.search-button {
-	width: 75px;
+.button-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .button {
-  margin: 10px;
-  width: 125px;
-  height: 125px;
+  margin: 1.5rem;
+  width: 15rem;
+  height: 15rem;
   border: none;
   border-radius: 15px 50px 30px;
   transition-duration: 0.6s;
@@ -123,6 +126,7 @@ h1 {
   background: url(images/baconeggs.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .breakfastBtn:hover {
@@ -135,6 +139,7 @@ h1 {
   background: url(images/steak.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .steakBtn:hover {
@@ -153,6 +158,12 @@ h1 {
   margin-top: 40px;
   text-align: center;
   height: auto;
+}
+
+.gif-content {
+  border-radius: 5px;
+  height: 148px;
+  width: 165px;
 }
 
 footer {
@@ -258,4 +269,27 @@ footer {
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .button {
+    margin: 1.5rem;
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .button {
+    margin: 1.25rem;
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .button {
+    margin: 1rem;
+    width: 9rem;
+    height: 9rem;
+  }
 }
