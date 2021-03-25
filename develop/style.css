@@ -96,6 +96,23 @@ input:checked + .slider:before {
 	border-color: black;
 }
 
+.steak-modal h4 {
+	background-color: #e0dddd;
+	padding: 10px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#search-value-2 {
+	padding: 5px;
+	background-color: white;
+	border: solid;
+	border-width: 1px;
+	border-color: black;
+}
+
 /* Rounded sliders */
 .slider.round {
 	border-radius: 34px !important;
@@ -174,9 +191,18 @@ footer {
 
 #modal1 {
 	background-image: url(images/137747728-bacon-scrambled-eggs-and-toast-seamless-pattern-english-breakfast-background.jpeg);
-	/* height: 555px;
-width: 300px; */
+	
 	background-size: contain;
+}
+
+.modal-footer {
+	background-color: #e0dddd !important;
+	padding: 10px !important;
+	height: 10% !important;
+	width: 70% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align: center !important;
 }
 
 #map {
@@ -198,4 +224,6 @@ width: 300px; */
 	}
 	h1 {
 	}
+
+	
 }
