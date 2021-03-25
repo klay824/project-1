@@ -35,7 +35,7 @@ $(document).ready(function () {
         var quote = data[random];
         console.log(quote);
 
-        var quoteDisplayed = '<h6 class="remove">' + quote + '</h6>';
+        var quoteDisplayed = '<span class="flow-text remove">' + '"' + quote + '"' + ' -Ron Swanson' + '</span>';
         var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })
@@ -72,7 +72,7 @@ $(document).ready(function () {
         var quote = data[random];
         console.log(quote);
 
-        var quoteDisplayed = '<h6 class="remove">' + quote + '</h6>';
+        var quoteDisplayed = '<span class="flow-text remove">' + '"' + quote + '"' + ' -Ron Swanson' + '</span>';
         var ronQuote = $(".quote");
         ronQuote.append(quoteDisplayed);
       })

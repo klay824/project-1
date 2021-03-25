@@ -22,6 +22,7 @@ header {
 
 }
 
+/* beginning of toggle switch styling */
 label.switch {
   margin-top: 5px !important;
   margin-left: 5px !important;
@@ -94,6 +95,8 @@ margin: 0px !important;
 .slider.round:before {
   border-radius: 50% !important;
 }
+/* end of toggle switch styling */
+
 
 h1 {
   color: white;
@@ -159,18 +162,24 @@ footer {
   height: 2.5rem;
 }
 
+/* Begin modal styling */
 #modal1 {
   background-image: url(images/137747728-bacon-scrambled-eggs-and-toast-seamless-pattern-english-breakfast-background.jpeg);
   background-size: contain;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 #modal2 {
   background-image: url(images/meat-steak-cartoon-set-icon-cartoon-set-icon-pork-sirloin-illustration-meat-steak-white-background_259641-41.jpeg);
   background-size: contain;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
 }
 
 .breakfast-modal h4 {
   background-color: #e0dddd;
+  border: 1px solid black;
   padding: 10px;
   width: 70%;
   margin-left: auto;
@@ -180,6 +189,7 @@ footer {
 
 .steak-modal h4 {
   background-color: #e0dddd;
+  border: 1px solid black;
   padding: 10px;
   width: 70%;
   margin-left: auto;
@@ -205,24 +215,23 @@ footer {
 
 .gray-background {
   background-color: #e0dddd;
+  border: 1px solid black;
+  border-radius: 10px;
 }
-
-/* .breakfast-div {
-  background-color: #e0dddd;
-}
-
-.steak-div {
-  background-color: #e0dddd;
-} */
 
 .modal-footer {
 	background-color: #e0dddd !important;
+  border: 1px solid black;
 	padding: 10px !important;
 	height: 10% !important;
 	width: 70% !important;
 	margin-left: auto !important;
 	margin-right: auto !important;
 	text-align: center !important;
+}
+
+.flow-text {
+  font-size: 95% !important;
 }
 
 .input-field {
@@ -241,11 +250,4 @@ footer {
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-
-	h1 {
-	}
-
 }
