@@ -9,12 +9,14 @@ body {
 }
 
 header {
+	height: 0;
 	width: auto;
+	padding-bottom: 30%;
 }
 .hero-banner {
 	background-image: url(images/ron-banner-2000-x-600-centered.png);
 	background-color: var(--light); /* Used if the image is unavailable */
-	background-repeat: repeat-x; /* Do not repeat the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: contain; /* Resize the background image to cover the entire container */
 	background-position: center;
 }
@@ -200,11 +202,8 @@ width: 300px; */
 	width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.hero-banner {
-		justify-content: center;
-		text-align: center;
-		height: 500px;
 	}
 	h1 {
 	}
