@@ -128,7 +128,7 @@ h1 {
 
 .breakfastBtn {
   box-shadow: 0 10px 20px black;
-  background: url(images/baconeggs.png);
+  background: url(images/ds-baconeggs.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -139,7 +139,7 @@ h1 {
 }
 .steakBtn {
   box-shadow: 0 10px 20px black;
-  background: url(images/steak.png);
+  background: url(images/ds-steak.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
