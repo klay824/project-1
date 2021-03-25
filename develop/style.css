@@ -140,8 +140,8 @@ h1 {
 
 .button {
 	margin: 10px;
-	width: 250px;
-	height: 250px;
+	width: 125px;
+	height: 125px;
 	border: none;
 	border-radius: 15px 50px 30px;
 	transition-duration: .60s;
@@ -177,7 +177,7 @@ h1 {
 
 .gif {
 	position: relative;
-	margin-top: 220px;
+	margin-top: 40px;
 	text-align: center;
 	height: auto;
 }

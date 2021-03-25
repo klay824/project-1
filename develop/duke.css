@@ -131,13 +131,13 @@ h1 {
 
 .button {
 
-    margin: 10px;
-    width: 250px;
-    height: 250px;
-    border: none;
-    border-radius: 15px 50px 30px;
-    transition-duration: .60s;
-    background-color: #6b3074;
+margin: 10px;
+width: 125px;
+height: 125px;
+border: none;
+border-radius: 15px 50px 30px;
+transition-duration: .60s;
+background-color: #6b3074;
 }
 
 .breakfastBtn {
@@ -194,10 +194,10 @@ h1 {
 }
 
 .gif {
-    position: relative;
-    margin-top: 220px;
-    text-align: center;
-    height: auto;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  height: auto;
 }
 
 footer {
