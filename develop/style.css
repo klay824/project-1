@@ -4,19 +4,19 @@
 
 body {
 	background-color: var(--light);
+
 	height: 100px;
 }
 
 header {
-	width: 100%;
+	width: auto;
 }
 .hero-banner {
 	background-image: url(images/ron-banner-2000-x-600-centered.png);
 	background-color: var(--light); /* Used if the image is unavailable */
-	height: 110px; /* You must set a specified height */
-	background-repeat: no-repeat; /* Do not repeat the image */
+	background-repeat: repeat-x; /* Do not repeat the image */
 	background-size: contain; /* Resize the background image to cover the entire container */
-	background-position: top;
+	background-position: center;
 }
 
 label.switch {

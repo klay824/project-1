@@ -8,15 +8,14 @@ body {
 }
 
 header {
-	width: 100%;
+	width: auto;
 }
 .hero-banner {
 	background-image: url(images/duke-silver-2000-x-600-centered.png);
 	background-color: var(--light); /* Used if the image is unavailable */
-	height: 300px; /* You must set a specified height */
-	background-repeat: no-repeat; /* Do not repeat the image */
+	background-repeat: repeat-x; /* Do not repeat the image */
 	background-size: contain; /* Resize the background image to cover the entire container */
-	background-position: top;
+	background-position: center;
 }
 
 label.switch {
@@ -77,6 +76,23 @@ input:checked + .slider:before {
 	-webkit-transform: translateX(26px) !important;
 	-ms-transform: translateX(26px) !important;
 	transform: translateX(26px) !important;
+}
+
+.breakfast-modal h4 {
+	background-color: #e0dddd;
+	padding: 10px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#search-value-1 {
+	padding: 5px;
+	background-color: white;
+	border: solid;
+	border-width: 1px;
+	border-color: black;
 }
 
 /* Rounded sliders */
