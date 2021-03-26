@@ -1,4 +1,4 @@
-# Project 1: What's Ron Having For Breakfast
+# Project 1: Ron's Grub Hub
 
 ## Project Description
 
@@ -7,11 +7,11 @@ Conceive and execute a design that solves a real-world problem by integrating da
 ## User Story
 
 ```
-I Ron Swanson, a true purveyor of the only meal that truly matters. Breakfast.
+I Ron Swanson, a true purveyor of the only meals that truly matter. Breakfast and steak.
 
-I will assist you in your journey to finding where you too can find all the eggs and bacon.
+I will assist you in your journey to finding where you too can find all the eggs and bacon and steak.
 
-Just fill in the questions asked and search.
+Just fill in your city and search.
 
 It's really that simple.
 ```
@@ -19,34 +19,48 @@ It's really that simple.
 ## Acceptance Criteria
 
 ```
-GIVEN I am searching for a breakfast restaurant
-WHEN I fill in my zip code or city name
+GIVEN I am searching for a breakfast or steak restaurant
+WHEN I click the toggle switch
+THEN I can choose between Ron Swanson mode and Duke Silver Mode
+WHEN I choose breakfast or steak
+THEN I fill in my city name
 WHEN I click search
-THEN a list of restaraunts shows up
-WHEN I select the one I want
-THEN I am presented with a funny gif or quote from Ron
-WHEN I click back I can go back to my search options and click on a new restaraunt
+THEN a restaurant, its address, a map of its location, and a quote from Ron will generate
+WHEN I click EXIT I can go back to the homepage and choose a meal type again
 ```
 
-## API's to be Used
+### To start looking for your next breakfast or steak meal [click here](https://klay824.github.io/project-1/).
+<br />
 
-Front End - wireframe, html, css
-Alex - JS, click events, pushing data to html
-Katy - API's Quotes
-JP - API's Food/Maps
+## APIs Utilized
 
-## Team Break Down
+* [FourSquare Places](https://developer.foursquare.com/docs/places-api/)
+* [Leaflet](https://leafletjs.com/)
+* [Ron Swanson Randon Quote API](https://github.com/jamesseanwright/ron-swanson-quotes)
 
-Front End - wireframe, html, css
-Alex - JS, API's Maps
-Katy - API's Quotes
-JP - API's Food/Maps
+## Bootstrap-Alternative CSS Framework Utilized
 
+* [Materialize CSS](https://materializecss.com/)
 
-* The URL of the functional, deployed application.
+## Resources
 
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+* [FourSquare Places Documentation](https://developer.foursquare.com/docs/places-api/endpoints/)
+* [Leaflet Documentation](https://leafletjs.com/reference-1.7.1.html)
+* [Ron Swanson Quote Documentation](https://github.com/jamesseanwright/ron-swanson-quotes)
+* [Materialize Documentation](https://materializecss.com/)
+* [Stack Overflow Search for overriding Materialize](https://stackoverflow.com/questions/36792910/override-materialize-css-properties)
+* [Stack Overflow for removing whitespace from responsive image](https://stackoverflow.com/questions/44011931/why-is-my-responsive-background-image-leaving-white-space-at-the-bottom-of-the-i)
+* [W3Schools Toggle Switch Documentation](https://www.w3schools.com/howto/howto_css_switch.asp)
+* [Switching beteen CSS stylesheets with JavaScript](https://stackoverflow.com/questions/7846980/how-do-i-switch-my-css-stylesheet-using-jquery)
+* [Saving stylesheet changes to local storage](https://www.youtube.com/watch?v=wodWDIdV9BY)
 
----
+## Team Responsibilities Break Down
 
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+* [Katie Patterson](https://github.com/ktp1451): Webpage design, wireframe, HTML, CSS, Materialize
+* [Alexander Vadeboncoeur](https://github.com/Alexva397): Leaflet API functionality and integration with the restaurant coordinates from FourSquare to generate a map for each restaurant search; additional Materialize and CSS styling
+* [JP Eiler](https://github.com/jpeiler97): FourSquare API functionality and assistance with integration with Leaflet; additional Materialize and CSS styling
+* [Katy Chadwell](https://github.com/klay824): Modal functionality, Ron Swanson Random Quote API functionality, Ron/Duke theme toggle switch design and functionality, additional Materialize and CSS styling
+
+## Challenges
+
+We initially wanted to use DocuMenu API to search for restaurants, but unfortunately it had a 500 per month call limit. We then looked at Yelp! API but it was not CORS compatible. We finally discovered FourSquare Places which fit our needs to locate a restaurant and we could use the coordinates from FourSquare to fetch a map from the Leaflet API. Another challenge was using the Materialize CSS. The documentation seems sparse and we found more information about Materialize through Googling. Materialize also interfered with some of our custom CSS.
