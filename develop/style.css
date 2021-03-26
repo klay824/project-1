@@ -156,9 +156,8 @@ h1 {
 .gif {
   position: relative;
   margin: 3rem auto;
-
   text-align: center;
-  height: auto;
+  height: 200px;
 }
 
 .gif-content {
