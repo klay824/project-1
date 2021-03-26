@@ -99,7 +99,7 @@ span.slider:before {
 
 h1 {
   color: white;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   margin: 1rem 2rem;
 }
@@ -155,12 +155,14 @@ h1 {
 
 .gif {
   position: relative;
-  margin-top: 40px;
+  margin: 3rem auto;
+
   text-align: center;
   height: auto;
 }
 
 .gif-content {
+  content: url("./images/tenor.gif");
   border-radius: 5px;
   height: 148px;
   width: 165px;
@@ -272,6 +274,9 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.5em;
+  }
   .button {
     margin: 1.5rem;
     width: 13rem;
@@ -279,6 +284,9 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.25em;
+  }
   .button {
     margin: 1.25rem;
     width: 11rem;
@@ -287,6 +295,9 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1.75em;
+  }
   .button {
     margin: 1rem;
     width: 9rem;

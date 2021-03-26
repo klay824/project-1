@@ -163,6 +163,13 @@ h1 {
   height: auto;
 }
 
+.gif-content {
+  content: url("./images/1HhD.gif");
+  border-radius: 5px;
+  height: 148px;
+  width: 165px;
+}
+
 footer {
   text-align: center;
   font-size: x-small;
@@ -271,6 +278,9 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.5em;
+  }
   .button {
     margin: 1.5rem;
     width: 13rem;
@@ -278,6 +288,9 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.25em;
+  }
   .button {
     margin: 1.25rem;
     width: 11rem;
@@ -286,6 +299,9 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1.75em;
+  }
   .button {
     margin: 1rem;
     width: 9rem;
