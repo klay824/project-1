@@ -8,18 +8,15 @@ body {
 }
 
 header {
-
 	height: 0;
 	width: auto;
-	padding-bottom: 30%;
+	padding-bottom: 25%;
 }
 .hero-banner {
-	background-image: url(images/duke-silver-2000-x-600-centered.png);
+	background-image: url(images/duke-silver-2000-x-450-centered.png);
 	background-color: var(--light); /* Used if the image is unavailable */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: contain; /* Resize the background image to cover the entire container */
-	background-position: center;
-
 }
 
 /* beginning of toggle switch styling */
@@ -158,7 +155,7 @@ h1 {
 
 .gif {
   position: relative;
-  margin-top: 40px;
+  margin-top: 10px;
   text-align: center;
   height: 250px;
 }
@@ -170,16 +167,23 @@ h1 {
   width: 165px;
 }
 
+img.animated-gif{
+  width: 120px;
+  height: auto;
+}
+
 footer {
   text-align: center;
-  font-size: x-small;
+  font-size: medium;
   background-color: #6b3074;
   color: white;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 3.5rem;
 }
+
+
 
 /* Begin modal styling */
 #modal1 {
@@ -272,9 +276,6 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
-  h1 {
-    font-size: 2.5em;
-  }
   .button {
     margin: 1.5rem;
     width: 13rem;
@@ -282,9 +283,6 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
-  h1 {
-    font-size: 2.25em;
-  }
   .button {
     margin: 1.25rem;
     width: 11rem;
@@ -293,9 +291,6 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
-  h1 {
-    font-size: 1.75em;
-  }
   .button {
     margin: 1rem;
     width: 9rem;
