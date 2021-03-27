@@ -64,3 +64,17 @@ WHEN I click EXIT I can go back to the homepage and choose a meal type again
 ## Challenges
 
 We initially wanted to use DocuMenu API to search for restaurants, but unfortunately it had a 500 per month call limit. We then looked at Yelp! API but it was not CORS compatible. We finally discovered FourSquare Places which fit our needs to locate a restaurant and we could use the coordinates from FourSquare to fetch a map from the Leaflet API. Another challenge was using the Materialize CSS. The documentation seems sparse and we found more information about Materialize through Googling. Materialize also interfered with some of our custom CSS.
+
+## Application Demo
+
+![](develop/images/deployed-application.gif)
+
+## Screenshots
+
+![](develop/images/screenshot-1.png)
+
+![](develop/images/screenshot-2.png)
+
+![](develop/images/screenshot-3.png)
+
+![](develop/images/screenshot-4.png)
